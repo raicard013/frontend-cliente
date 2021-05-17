@@ -33,7 +33,7 @@ class CriarCliente extends Component {
     render() {
         const { redirect } = this.state;
         if (redirect) {
-            return <Redirect to="/cliente" />;
+            return <Redirect to="/clientes" />;
         } else {
             return (
                 <form onSubmit={this.handleSubmit}>
