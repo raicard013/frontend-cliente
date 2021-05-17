@@ -33,7 +33,7 @@ class CriarCliente extends Component {
     render() {
         const { redirect } = this.state;
         if (redirect) {
-            return <Redirect to="/clientes" />;
+            return <Redirect to="/cliente" />;
         } else {
             return (
                 <form onSubmit={this.handleSubmit}>
@@ -126,7 +126,7 @@ class CriarCliente extends Component {
     };
  
     handleSubmit = event => {
-        fetch("${process.env.REACT_APP_API_URL}/cliente", {
+        fetch("${process.env.REACT_APP_API_URL}", {
             method: "post",
             body: JSON.stringify(this.state.usuario),
             headers: {
