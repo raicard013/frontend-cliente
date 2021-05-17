@@ -126,7 +126,7 @@ class CriarCliente extends Component {
     };
  
     handleSubmit = event => {
-        fetch("${process.env.REACT_APP_API_URL}/cliente", {
+        fetch("${process.env.REACT_APP_API_URL}/${cliente}", {
             method: "post",
             body: JSON.stringify(this.state.usuario),
             headers: {
